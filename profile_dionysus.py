@@ -18,7 +18,7 @@ color_start_index = color_index + len("Favorite Color:")
 color_end_offset = html[color_start_index:].find("<")
 color_end_index = color_start_index + color_end_offset
 color_raw_text = html[color_start_index:color_end_index]
-color_text = color_raw_text.replace(" ", "")
+color_text = color_raw_text.strip(" \r\n\t")
 print("Favorite Color:", color_text)
 
 # Get Color and Name - RealPython Solution
